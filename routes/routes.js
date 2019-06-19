@@ -10,5 +10,7 @@ module.exports = function(){
 
     router.get('/nuevo-proyecto', startController.formularioProyecto);
 
+    router.post('/nuevo-proyecto', startController.nuevoProyecto);
+
     return router;
 }
