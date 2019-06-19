@@ -8,5 +8,7 @@ module.exports = function(){
 
     router.get('/nosotros', startController.nosotros);
 
+    router.get('/nuevo-proyecto', startController.formularioProyecto);
+
     return router;
 }
