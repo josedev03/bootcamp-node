@@ -1,11 +1,17 @@
-module.exports.home = (req, res)=>{
+exports.home = (req, res)=>{
     res.render('home', {
-        titlePage: 'homeTitle'
+        nombrePagina: 'homeTitle'
     });
 }
 
-module.exports.nosotros = (req, res)=>{
+exports.nosotros = (req, res)=>{
     res.render('nosotros', {
-        titlePage: 'nosotrosTitle'
+        nombrePagina: 'nosotrosTitle'
+    });
+}
+
+exports.formularioProyecto = (req, res)=>{
+    res.render('nuevoProyecto', {
+        nombrePagina: 'Nuevo Proyecto'
     });
 }
