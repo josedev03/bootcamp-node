@@ -17,5 +17,5 @@ exports.formularioProyecto = (req, res)=>{
 }
 
 exports.nuevoProyecto = (req, res)=>{
-    res.send('se creara un nuevo proyecto');
+    console.log(req.body);
 }
