@@ -15,3 +15,7 @@ exports.formularioProyecto = (req, res)=>{
         nombrePagina: 'Nuevo Proyecto'
     });
 }
+
+exports.nuevoProyecto = (req, res)=>{
+    res.send('se creara un nuevo proyecto');
+}
