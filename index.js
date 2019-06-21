@@ -3,6 +3,14 @@ const routes = require('./routes/routes');
 const path = require('path');
 const bodyParser = require('body-parser');
 
+const db = require('./config/db');
+
+require('./models/Proyectos');
+
+db.sync()
+    .then(()=> console.log('Conectado al servidor bd'))
+    .catch(err => console.log(err));
+
 const app = express();
 
 // definir donde cargar los archivos estaticos
