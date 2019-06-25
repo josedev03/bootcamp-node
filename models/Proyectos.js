@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/db');
+const slug = require('slug');
 
 // p1: nombre del modelo, campos de la tabla
 const Proyectos = db.define('proyectos', {
@@ -12,6 +13,15 @@ const Proyectos = db.define('proyectos', {
         type: Sequelize.STRING
     },
     url: Sequelize.STRING
+}, {
+    hooks: {
+        beforeCreate(proyecto){
+            const url = slug(proyecto.nombre).toLowerCase();
+
+            
+            proyecto.url = url;
+        }
+    }
 })
 
 module.exports = Proyectos;
