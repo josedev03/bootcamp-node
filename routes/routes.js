@@ -5,7 +5,7 @@ const { body } = require('express-validator/check');
 
 module.exports = function(){
 
-    router.get('/', startController.home);
+    router.get('/', startController.proyectosHome);
 
     router.get('/nosotros', startController.nosotros);
 

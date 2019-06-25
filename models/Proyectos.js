@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/db');
 const slug = require('slug');
+const shortid = require('shortid');
 
 // p1: nombre del modelo, campos de la tabla
 const Proyectos = db.define('proyectos', {
@@ -17,9 +18,7 @@ const Proyectos = db.define('proyectos', {
     hooks: {
         beforeCreate(proyecto){
             const url = slug(proyecto.nombre).toLowerCase();
-
-            
-            proyecto.url = url;
+            proyecto.url = `${url}-${shortid.generate()}`;
         }
     }
 })
