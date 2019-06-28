@@ -16,5 +16,7 @@ module.exports = function(){
         proyectosControlller.nuevoProyecto
     );
 
+    router.get('/proyectos/:url', proyectosControlller.proyectoPorUrl);
+
     return router;
 }

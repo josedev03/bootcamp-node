@@ -51,7 +51,7 @@ exports.proyectoPorUrl = async (req, res) =>{
     if(!proyecto) return netx();
 
     res.render('tareas', {
-        nombrePagina: 'tareas del proyecto',
+        nombrePagina: 'Tareas del Proyecto',
         proyecto
     });
 }
