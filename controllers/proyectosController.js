@@ -40,3 +40,18 @@ exports.nuevoProyecto = async (req, res)=>
         res.redirect('/');
     }
 }
+
+exports.proyectoPorUrl = async (req, res) =>{
+    const proyecto = await Proyectos.findOne({
+        where:{
+            url: req.params.url
+        }
+    })
+
+    if(!proyecto) return netx();
+
+    res.render('tareas', {
+        nombrePagina: 'tareas del proyecto',
+        proyecto
+    });
+}

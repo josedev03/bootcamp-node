@@ -2,8 +2,10 @@ const express = require('express');
 const routes = require('./routes/routes');
 const path = require('path');
 const bodyParser = require('body-parser');
-
 const db = require('./config/db');
+
+// helpers con algunas funciones
+const helpers = require('./helpers');
 
 require('./models/Proyectos');
 
@@ -21,6 +23,12 @@ app.set('view engine', 'pug');
 
 // agregar la carpeta de las vistas
 app.set('views', path.join(__dirname, './views'));
+
+// pasar vardump a la aplicación
+app.use( (req, res, next)=>{
+    res.locals.vardump = helpers.vardump;
+    next();
+});
 
 // habilitar bodyParser para leer datos del formulario
 app.use(bodyParser.urlencoded({extended: true}));
