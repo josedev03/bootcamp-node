@@ -1,0 +1,151 @@
+Clase 20
+
+crear una seccion para nuevos proyectos
+    - crear la ruta para nuevos proyectos (/nuevo-proyecto, formularioProyecto)
+    - crear un controlador para nuevos proyectos (formularioProyecto)
+    - crear una vista para nuevos proyectos (nuevoProyecto.pug) (.contenido-principal)(h1 #{nombrePagina})
+
+Clase 21
+
+creando el formulario para nuevos proyectos
+    -copiar del archivo ya creando
+
+Clase 22
+
+Enviando el formulario en express, se tomaran los datos del formulario y se pasaran a una ruta con metodo
+post
+    - modificar el action del formulario (/nuevo-proyecto) (method='post')
+    - Crear una ruta de tipo post para nuevos proyectos (post, /nuevo-proyecto, protectosController.nuevoProyecto)
+
+Clase 23
+
+Leyendo los datos de un formulario en express, instalacion body-parser
+    - instalar body-parser, configurarlo para ser utilizado
+    - imprimir en consola los datos recibidos del formulario
+
+Clase 24
+
+Validacion simple de un formulario, [] tomar los datos recibidos del formulario y validar que tengan valor
+destructurar en una variable el nombre del proyecto
+    - validar el campo, si esta vacio mostrar los errores en la vista (nuevoProyecto)
+    - modificar la vista para que antes del formulario muestre todos los errores, enviar variable con los errores (.alerta)
+
+Clase 25
+
+Instalacion de mysql
+
+Clase 26
+
+Instalando heidy sql
+
+Clase 27
+
+Instalando mysql
+
+Clase 28
+
+Instalando tableplus
+
+Clase 29
+
+Que es un ORM
+
+Clase 30
+
+Instalando y configurando sequelize, []
+    - instalar el controlador de mysql
+    - instalar sequelize
+    - configurar sequelize (config db.js)
+
+Clase 31
+
+Creando el modelo protectos
+    - importar la conexion
+    - crear modelo (models, Proyectos.js, proyectos, id nombre url)
+
+Clase 32
+
+Dejando que sequelize genere automaticamente las tablas
+    - crear la base de datos (uptasknode)
+    - importar la configuracion de la db
+    - validar la conexion (esto utiliza promises por lo tanto then,catch)
+    - Importar el modelo de proyectos
+    - crear la tabla del modelo proyectos (async)
+
+Clase 33
+
+Insertando registros con sequelize
+    - importar el modelo proyectos en el controlador
+    - sino hay errores, insertar el registro (promises)
+
+Clase 34
+
+Insertando registros con async await
+    - definir el controlador como async
+    - definir la consulta con await
+    - redireccionar al home
+
+Clase 35
+
+Habiliar express validator, sanitizar los datos enviados a bd
+    - instalar express-validator
+    - crear una variable apartir del express-validator (check)
+    - validar los campos en las rutas antes de enviar al controlador
+
+Clase 36
+
+Generando una url de proyecto Creando una url unica para cada proyecto, reemplazar espacios por -
+    - limpiar la tabla
+    - instalar slug
+    - importar slug en el controlador
+    - agregar url a la creacion del registro
+
+Clase 37
+
+Utilizando los hooks de sequelize para generar una URL automaticamente
+    - en el modelo de proyectos despues de la definicion agregar un hook
+    - crear un hook antes de insertar en la base de datos
+
+Clase 38
+
+Generando una URL unica para proyectos, insertar en la bd una url unica
+    - instalar shortid
+    - importar shortid en el modelo
+    - crear la url con el id unico
+
+Clase 39
+
+Consultando la bd y pasando el resultado a la vista, se consultaran los proyectos creados y se mostran en el home
+    - en el controlador de proyectos consultar todos los proyectos
+    - pasar los proyectos obtenidos a la vista
+    - en el layout mostrar los proyectos obtenidos del controlador
+
+Clase 40
+
+Creando un helper para visualizar los datos obtenidos de la db
+    - crear un archivo helpers.js
+    - crear una funcion que tome un objeto y lo retorne con stringify
+    - importar el helpers en el index
+    - despues de las vistas hacer publico el vardump para toda la aplicacion (res.locals, next)
+    - mostrar los proyectos con el vardump en el layout
+
+Clase 41
+
+Pasando un helper hacia la vista y comprendiendo mejor el middleware
+    - en el controlador es necesario llamar el helper con res.locals.nombreHelper
+
+Clase 42
+
+Agregando routing a los distintos proyectos
+    - en el layout ingresar el routing a los proyectos (/proyectos/)
+    - crear la ruta para el proyecto seleccionado (comodin) (proyectoPorUrl)
+    - Crear el controlador
+    - mostrar por consola el valor de la url del proyecto
+
+Clase 43
+
+Finalizando el routing para cada proyecto
+    - en el controlador buscar el proyecto por url
+    - validar sino hay proyectos
+    - enviar los datos del proyecto a la vista tareas
+    - crear la vista tareas
