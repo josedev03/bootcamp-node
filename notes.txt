@@ -149,3 +149,14 @@ Finalizando el routing para cada proyecto
     - validar sino hay proyectos
     - enviar los datos del proyecto a la vista tareas
     - crear la vista tareas
+
+Clase 44
+
+Crear el formulario con las acciones para el proyecto editar y eliminar
+    - en la vista tareas agregar el nombre del proyecto al nombre de la pagina
+    - en la vista tareas agregar link boton editar proyecto
+    - en la vista tareas agregar boton eliminar proyecto
+    - crear ruta para llegar al formulario de editar proyecto
+    - direccionar el link boton editar a la ruta que creamos
+    - crear el metodo del controlador que establecimos en la ruta
+    - en el controlador enviar a la misma vista de nuevo proyectos, enviar proyectos

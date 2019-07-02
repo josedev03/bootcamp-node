@@ -42,6 +42,8 @@ exports.nuevoProyecto = async (req, res)=>
 }
 
 exports.proyectoPorUrl = async (req, res) =>{
+    const proyectos = await Proyectos.findAll();
+
     const proyecto = await Proyectos.findOne({
         where:{
             url: req.params.url
@@ -52,6 +54,17 @@ exports.proyectoPorUrl = async (req, res) =>{
 
     res.render('tareas', {
         nombrePagina: 'Tareas del Proyecto',
-        proyecto
+        proyecto,
+        proyectos
     });
+}
+
+exports.formularioEditar = async (req, res) =>{
+    const proyectos = await Proyectos.findAll();
+
+    // render a la vista
+    res.render('nuevoProyecto', {
+        nombrePagina: 'Editar Proyecto',
+        proyectos
+    })
 }

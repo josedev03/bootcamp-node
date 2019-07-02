@@ -16,7 +16,11 @@ module.exports = function(){
         proyectosControlller.nuevoProyecto
     );
 
+    // listar proyecto
     router.get('/proyectos/:url', proyectosControlller.proyectoPorUrl);
+
+    // Actualizar proyecto
+    router.get('/proyecto/editar/:id', proyectosControlller.formularioEditar);
 
     return router;
 }
