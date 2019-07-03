@@ -160,3 +160,10 @@ Crear el formulario con las acciones para el proyecto editar y eliminar
     - direccionar el link boton editar a la ruta que creamos
     - crear el metodo del controlador que establecimos en la ruta
     - en el controlador enviar a la misma vista de nuevo proyectos, enviar proyectos
+
+Clase 45
+
+Consultando el proyecto actual y los proyectos existentes en un promise
+    - obtener el proyecto en el controlador(formulario editar ) agregar una consulta por id
+    - pasar el proyecto obtenido a la vista (nuevoProyecto)
+    - las dos consultas del controlador se trabajaran con promise.all, retirar el await que ya existia
