@@ -167,3 +167,14 @@ Consultando el proyecto actual y los proyectos existentes en un promise
     - obtener el proyecto en el controlador(formulario editar ) agregar una consulta por id
     - pasar el proyecto obtenido a la vista (nuevoProyecto)
     - las dos consultas del controlador se trabajaran con promise.all, retirar el await que ya existia
+
+Clase 46
+
+Creando el formulario para editar el proyecto
+    - Crear carpetas de mixins
+    - Crear archivo crearProyecto
+    - Cortar el formulario de la vista nuevoProyecto.pug y pegar en el archivo creado
+    - Sintaxis de mixin
+    - Incluir el mixin en el archivo nuevoProyecto.pug (inlcuir y llamar)
+    - Modificar el action de nuevo-proyecto para cuando es un proyecto nuevo o uno existente
+

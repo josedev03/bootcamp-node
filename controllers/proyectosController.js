@@ -15,9 +15,12 @@ exports.nosotros = (req, res)=>{
     });
 }
 
-exports.formularioProyecto = (req, res)=>{
+exports.formularioProyecto = async  (req, res)=>{
+    const proyectos = await Proyectos.findAll();
+
     res.render('nuevoProyecto', {
-        nombrePagina: 'Nuevo Proyecto'
+        nombrePagina: 'Nuevo Proyecto',
+        proyectos
     });
 }
 
@@ -46,7 +49,7 @@ exports.proyectoPorUrl = async (req, res) =>{
 
     const proyectoPromise = Proyectos.findOne({
         where: {
-            id: req.params.url
+            url: req.params.url
         }
     });
 
