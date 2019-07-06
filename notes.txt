@@ -178,3 +178,9 @@ Creando el formulario para editar el proyecto
     - Incluir el mixin en el archivo nuevoProyecto.pug (inlcuir y llamar)
     - Modificar el action de nuevo-proyecto para cuando es un proyecto nuevo o uno existente
 
+Clase 47
+
+Guardando los cambios cuando un proyecto es modificado en su nombre
+    - creamos la ruta para actualizar el proyecto
+    - creamos el controller para actualizar
+    - llamamos el modelo del proyecto y utilizamos el metodo update de sequelize

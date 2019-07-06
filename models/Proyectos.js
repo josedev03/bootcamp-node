@@ -16,11 +16,11 @@ const Proyectos = db.define('proyectos', {
     url: Sequelize.STRING
 }, {
     hooks: {
-        beforeCreate(proyecto){
+        beforeCreate: function (proyecto){
             const url = slug(proyecto.nombre).toLowerCase();
             proyecto.url = `${url}-${shortid.generate()}`;
         }
     }
-})
+});
 
 module.exports = Proyectos;
