@@ -184,3 +184,11 @@ Guardando los cambios cuando un proyecto es modificado en su nombre
     - creamos la ruta para actualizar el proyecto
     - creamos el controller para actualizar
     - llamamos el modelo del proyecto y utilizamos el metodo update de sequelize
+
+Clase 48
+
+Configurando webpack
+    - instalacion de babel-loader
+    - instalar la libreria concurrently
+    - crear uun archivo de configuracion de webpack
+    - crear archivo public/js/app.js (este sera el punto de entrada)
