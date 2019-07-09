@@ -1,1 +1,1 @@
-alert('probando');
+import tareas from './modulos/proyectos';
