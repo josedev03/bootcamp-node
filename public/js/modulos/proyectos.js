@@ -17,25 +17,23 @@ if(btnEliminar){
             confirmButtonText: 'Si, Borrar',
             cancelButtonText: 'No, Cancelar'
         }).then((result) => {
-            if (result.value) {
-
+            if (result.value)
+            {
                 const url = `${location.origin}/proyectos/${urlProyecto}`
-                axios.delete(url,{params: urlProyecto})
+                axios.delete(url,{params: {urlProyecto}})
                     .then(function(respuesta){
                         console.log(`respuesta: ${respuesta}`);
+
+                        Swal.fire(
+                            'Proyecto Eliminado!',
+                            respuesta.data,
+                            'success'
+                        );
+            
+                        // setTimeout(()=>{
+                        //     window.location.href = '/'
+                        // },3000)
                     });
-
-                return;
-
-                Swal.fire(
-                    'Proyecto Eliminado!',
-                    'El proyecto se ha eliminado',
-                    'success'
-                );
-    
-                setTimeout(()=>{
-                    window.location.href = '/'
-                },3000)
             }
         })
     });

@@ -27,5 +27,8 @@ module.exports = function(){
         proyectosControlller.actualizarProyecto
     );
 
+    // eliminar proyecto
+    router.delete('/proyectos/:url', proyectosControlller.eliminarProyecto);
+
     return router;
 }
