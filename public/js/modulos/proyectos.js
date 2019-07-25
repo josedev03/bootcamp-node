@@ -30,10 +30,17 @@ if(btnEliminar){
                             'success'
                         );
             
-                        // setTimeout(()=>{
-                        //     window.location.href = '/'
-                        // },3000)
-                    });
+                        setTimeout(()=>{
+                            window.location.href = '/'
+                        },3000)
+                    })
+                    .catch(function(){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Hubo un error',
+                            text: 'No se pudo eliminar el proyecto'
+                        })
+                    })
             }
         })
     });

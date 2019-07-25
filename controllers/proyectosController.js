@@ -110,5 +110,9 @@ exports.eliminarProyecto = async (req, res, netx)=>{
     const {urlProyecto} = req.query;
     const resultado = await Proyectos.destroy({where: {url: urlProyecto}});
 
+    if(!resultado){
+        return netx();
+    }
+
     res.status(200).send('Proyecto eliminado correctamente');
 }
